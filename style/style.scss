@@ -1,0 +1,410 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+//以下開始
+article {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #fafafa;
+
+  section {
+    text-align: center;
+    padding-bottom: 5rem;
+
+    h2 {
+      font-size: 24px;
+      padding: 5rem;
+      color: #1736dc;
+      font-weight: 600;
+    }
+  }
+  //header
+  #bgImg {
+    background-image: url("../picture/img-headerShape.png");
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+
+    .photo {
+      display: flex;
+      flex-direction: column;
+      margin: 105px 135px 10px 135px;
+
+      img {
+        height: 151px;
+        width: 151px;
+      }
+      li {
+        font-size: 14px;
+        color: #4a4a4a;
+        text-align: center;
+        margin: 5px;
+        &:first-of-type {
+          font-size: 42px;
+          color: #000000;
+        }
+      }
+    }
+    .icon {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin: 0.5em;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  //Skill
+  .imgflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .divB {
+      background-color: #ffffff;
+      margin-bottom: 56px;
+      width: 284px;
+      border: 0.5px solid #eee;
+      border-radius: 6px;
+      box-shadow: 0px 1px 1px #000;
+      border-bottom: 6px solid #f58d23;
+
+      div {
+        img {
+          width: 90px;
+          height: 79px;
+          margin: 20px;
+        }
+      }
+      h4 {
+        font-size: 18px;
+        margin: 15px;
+        color: #4a4a4a;
+      }
+      ul {
+        list-style: disc;
+        padding: 0 50px;
+        color: #4a4a4a;
+        padding-bottom: 27px;
+
+        li {
+          font-size: 10px;
+          color: #4a4a4a;
+          margin-bottom: 3px;
+          padding-left: 10px;
+          text-align: left;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+
+  .node-line {
+    .line {
+      width: 2px;
+      height: 650px;
+      background: #d8d8d8;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      position: absolute;
+      z-index: 0;
+    }
+    .node {
+      position: relative;
+    }
+    .one {
+      margin-bottom: 50px;
+    }
+
+    .data {
+      width: 260px;
+      position: relative;
+      border: 1px solid #fb56bf;
+      border-radius: 10px;
+      padding: 10px;
+      line-height: 1.2em;
+      bottom: 30px;
+      h4 {
+        color: #8a1737;
+        font-size: 12px;
+        &:last-of-type {
+          color: black;
+        }
+      }
+      p {
+        font-size: 12px;
+        &:last-of-type {
+          font-size: 10px;
+        }
+      }
+    }
+    .data.right {
+      left: calc(50% + 30px);
+      text-align: left;
+    }
+    .data.left {
+      left: calc(50% - 260px - 50px);
+      text-align: right;
+    }
+  }
+  .line::before {
+    content: "";
+    width: 46px;
+    height: 4px;
+    background: #d8d8d8;
+
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 23px);
+  }
+  .cards {
+    display: flex;
+    .card {
+      width: calc(100% / 3);
+      margin: 35px 10px;
+      &:nth-child(2) {
+        div {
+          background-color: #424242;
+        }
+      }
+      &:nth-child(3) {
+        div {
+          background-color: #8ad7fa;
+        }
+      }
+      div {
+        background-color: pink;
+        height: 150px;
+      }
+
+      img {
+        left: 0;
+        right: 0;
+        padding: 35px 15px;
+      }
+      h3 {
+        text-align: left;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 600;
+        padding: 6px;
+      }
+      p {
+        text-align: left;
+        font-size: 14px;
+        color: #000000;
+
+        padding: 5px;
+      }
+    }
+  }
+
+  .me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 335px;
+      width: 260px;
+      margin: 0 20px;
+    }
+    div {
+      width: 442px;
+      margin: 0 20px;
+      p {
+        text-align: left;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  footer {
+    div {
+      background-image: url("../picture/img-Looper-bg.png");
+      height: 87px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  article {
+    .node-line {
+      .data.left {
+        left: calc(50% - 290px);
+      }
+      .data.right {
+        left: 55%;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  article {
+    .node-line {
+      .line {
+        background: none;
+      }
+
+      .data.right,
+      .data.left {
+        left: calc(50% - 130px);
+
+        margin: 30px 0 auto;
+        text-align: center;
+      }
+    }
+    .node {
+      img {
+        display: none;
+      }
+    }
+
+    .line::before {
+      content: none;
+    }
+  }
+}
