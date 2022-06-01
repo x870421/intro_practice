@@ -151,7 +151,7 @@ article section h2 {
   font-weight: 600;
 }
 
-article #bgImg {
+article .bgImg {
   background-image: url("../picture/img-headerShape.png");
   background-size: cover;
   height: 400px;
@@ -163,7 +163,7 @@ article #bgImg {
           align-items: center;
 }
 
-article #bgImg .photo {
+article .bgImg .infor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,24 +174,24 @@ article #bgImg .photo {
   margin: 105px 135px 10px 135px;
 }
 
-article #bgImg .photo img {
-  height: 151px;
-  width: 151px;
-}
-
-article #bgImg .photo li {
+article .bgImg .infor li {
   font-size: 14px;
   color: #4a4a4a;
   text-align: center;
   margin: 5px;
 }
 
-article #bgImg .photo li:first-of-type {
+article .bgImg .infor li:first-of-type {
   font-size: 42px;
   color: #000000;
 }
 
-article #bgImg .icon {
+article .bgImg .infor li img {
+  height: 151px;
+  width: 151px;
+}
+
+article .bgImg .icon {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,7 +202,7 @@ article #bgImg .icon {
           flex-direction: column;
 }
 
-article #bgImg .icon li {
+article .bgImg .icon li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,13 +212,14 @@ article #bgImg .icon li {
   margin: 0.5em;
 }
 
-article #bgImg .icon li img {
+article .bgImg .icon li img {
   width: 30px;
   height: 30px;
 }
 
-article #bgImg .icon li a {
+article .bgImg .icon li a {
   color: white;
+  text-decoration: none;
 }
 
 article .imgflex {
@@ -272,70 +273,85 @@ article .imgflex .divB ul li {
   line-height: 1rem;
 }
 
-article .node-line .line {
+article .content {
+  margin: 50px auto;
+  text-align: center;
+}
+
+article .content::before {
+  content: url(../picture/dot-start.png);
+  display: block;
+}
+
+article .content::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #888;
+  display: block;
+  margin: 0 auto;
+}
+
+article .content ul {
+  position: relative;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .content ul::before {
+  content: "";
+  position: absolute;
   width: 2px;
-  height: 650px;
-  background: #d8d8d8;
+  background-color: #888;
+  height: 100%;
+  top: 0;
+}
+
+article .content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: 10px 0;
+}
+
+article .content ul li:nth-child(even) {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+article .content ul li:nth-child(odd) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+article .content ul li .article {
+  border: 1px solid #fb56bf;
+  text-align: left;
+  border-radius: 5px;
+  padding: 15px;
+  width: 190px;
+  margin: 0 20px;
+}
+
+article .content ul li::before {
+  content: url("../picture/dot-timeItem.png");
+  position: absolute;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 0;
-}
-
-article .node-line .node {
-  position: relative;
-}
-
-article .node-line .one {
-  margin-bottom: 50px;
-}
-
-article .node-line .data {
-  width: 260px;
-  position: relative;
-  border: 1px solid #fb56bf;
-  border-radius: 10px;
-  padding: 10px;
-  line-height: 1.2em;
-  bottom: 30px;
-}
-
-article .node-line .data h4 {
-  color: #8a1737;
-  font-size: 12px;
-}
-
-article .node-line .data h4:last-of-type {
-  color: black;
-}
-
-article .node-line .data p {
-  font-size: 12px;
-}
-
-article .node-line .data p:last-of-type {
-  font-size: 10px;
-}
-
-article .node-line .data.right {
-  left: calc(50% + 30px);
-  text-align: left;
-}
-
-article .node-line .data.left {
-  left: calc(50% - 260px - 50px);
-  text-align: right;
-}
-
-article .line::before {
-  content: "";
-  width: 46px;
-  height: 4px;
-  background: #d8d8d8;
-  position: absolute;
-  bottom: -5px;
-  left: calc(50% - 23px);
 }
 
 article .cards {
